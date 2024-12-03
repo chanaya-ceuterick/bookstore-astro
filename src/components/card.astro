@@ -1,0 +1,77 @@
+---
+const { title, author } = Astro.props;
+---
+
+<div class="card">
+  <!-- Image or Placeholder -->
+  <div class="card-image">
+    <!-- Placeholder Image -->
+  </div>
+  
+  <!-- Content Section -->
+  <div class="card-content">
+    <div class="text">
+      <h3>{title || "title"}</h3>
+      <p>{author || "author"}</p>
+    </div>
+    <button class="read-more">Read More</button>
+  </div>
+</div>
+
+<style>
+  .card {
+    display: flex;
+    flex-direction: column;
+    width: 240px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: #f0f0f0;
+  }
+
+  .card-image {
+    background-color: #d3d3d3;
+    height: 160px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .card-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px;
+    background-color: #fff;
+  }
+
+  .card-content .text h3 {
+    margin: 0;
+    font-size: 14px;
+    font-weight: 600;
+    color: #000;
+  }
+
+  .card-content .text p {
+    margin: 4px 0 0;
+    font-size: 12px;
+    color: #777;
+  }
+
+  .read-more {
+    font-size: 12px;
+    color: #555;
+    background-color: #f3f3f3;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+
+  .read-more:hover {
+    background-color: #e0e0e0;
+  }
+</style>
+
+
