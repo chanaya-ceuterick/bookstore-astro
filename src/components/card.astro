@@ -1,5 +1,13 @@
 ---
 const { title, author } = Astro.props;
+
+const API_URL = 'http://localhost:1337/api/books';
+
+// Fetch data from the Strapi API
+const response = await fetch(API_URL);
+const data = await response.json();
+const cards = data.data; // Access the "data" array
+
 ---
 
 <div class="card">
