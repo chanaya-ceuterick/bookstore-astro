@@ -1,11 +1,21 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Card from '../components/card.astro'
-
-
+import Layout from "../layouts/Layout.astro";
+import Card from "../components/card.astro";
 ---
 
-<Layout>	
-	<h1>Bookstore</h1>
-	<Card title="Book Title" author="Author Name" />
+<Layout>
+	<section class="header">
+		<h1>Chanaya's Bookstore</h1>
+	</section>
 </Layout>
+
+<style>
+	.header {
+		background-image: url("../assets/hero-image.jpeg");
+		width: 100%;
+		height: 80vh;
+		background-position: center;
+		background-size: cover;
+		text-align: center;
+	}
+</style>
